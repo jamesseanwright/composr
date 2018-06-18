@@ -1,0 +1,30 @@
+{
+  "name": "composr",
+  "version": "0.0.1",
+  "description": "A library for building declartive web UIs via function composition",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "eslint 'src/**/*.mjs'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesseanwright/composr.git"
+  },
+  "keywords": [
+    "ui",
+    "functional",
+    "declarative",
+    "dom",
+    "web"
+  ],
+  "author": "James Wright <james@jamesswright.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesseanwright/composr/issues"
+  },
+  "homepage": "https://github.com/jamesseanwright/composr#readme",
+  "devDependencies": {
+    "eslint": "4.19.1",
+    "rollup": "0.60.7"
+  }
+}
