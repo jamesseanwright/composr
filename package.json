@@ -2,8 +2,12 @@
   "name": "composr",
   "version": "0.0.1",
   "description": "A library for building declartive web UIs via function composition",
-  "main": "dist/index.js",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/esm/index.mjs",
   "scripts": {
+    "build": "mkdir -p dist && rm -rf dist/* && npm run build:commonjs && npm run build:esm",
+    "build:commonjs": "babel src --out-dir dist/commonjs",
+    "build:esm": "cp -r src dist/esm",
     "test": "eslint 'src/**/*.mjs'"
   },
   "repository": {
@@ -24,6 +28,9 @@
   },
   "homepage": "https://github.com/jamesseanwright/composr#readme",
   "devDependencies": {
+    "@babel/cli": "7.0.0-beta.51",
+    "@babel/core": "7.0.0-beta.51",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
     "eslint": "4.19.1",
     "rollup": "0.60.7"
   }

@@ -29,3 +29,7 @@ export const notify = source => ({ type, target }) => {
 };
 
 export const onEvent = func => ({ target }) => func(target);
+
+export const mount = (sourceElement, targetElement) => {
+    targetElement.appendChild(sourceElement);
+};
