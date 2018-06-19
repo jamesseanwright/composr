@@ -1,11 +1,11 @@
-import {
+const {
     composeElement,
     setDomAttribute,
     withChildren,
     setText,
     applyClassToElement,
     mount,
-} from '../';
+} = require('../');
 
 const app = composeElement(
     withChildren(
