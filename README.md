@@ -52,9 +52,11 @@ nvm install/use
 npm i
 ```
 
-The run one of the following scripts:
+Then run one of the following scripts:
 
 * `npm run dev` - builds the source and example app, and then starts the server
 * `npm test` - runs the unit tests
 
-This library will generate two
+The `npm run build` script will generate respective ES module and CommonJS builds, which are consumed in the `example` app across two separate entry points.
+
+Within the example app's `index.html` page, one can replace `es` with `cjs` in the sole `script` element to switch between the bundles; they are functionally identical.
