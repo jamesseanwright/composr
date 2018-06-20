@@ -50,4 +50,33 @@ describe('Composr', () => {
             expect(eventListenerStub).toHaveBeenCalledWith('click', handler);
         });
     });
+
+    describe('mount', () => {
+        it('should mount the element to the given container', () => {
+            const sourceElement = composr.composeElement()('div');
+            const targetElement = composr.composeElement()('div');
+
+            composr.mount(sourceElement, targetElement);
+
+            expect(targetElement.children.length).toEqual(1);
+            expect(targetElement.firstChild).toEqual(sourceElement);
+        });
+    });
+
+    describe('withChildren', () => {
+        it('should mount multiple child elements', () => {
+            const children = [
+                composr.composeElement()('div'),
+                composr.composeElement()('div'),
+                composr.composeElement()('div'),
+            ];
+
+            const targetElement = composr.composeElement(
+                composr.withChildren(...children)
+            )('div');
+
+            expect(targetElement.children.length).toEqual(3);
+            children.forEach((child, i) => expect(targetElement.children[i]).toEqual(child));
+        });
+    });
 });

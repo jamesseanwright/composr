@@ -19,12 +19,13 @@ export const addEventListener = (eventName, handler) => element => {
 };
 
 export const onEventNotification = (eventName, handler) => element => {
-    // TODO: make into a proxy and remove this crap!
+    // TODO: replace to allow multiple subscriptions
     element[`${eventName}Subscription`] = handler;
     return element;
 };
 
 export const notify = source => ({ type, target }) => {
+    // TODO: replace to allow multiple subscriptions
     (source[`${type}Subscription`] || (() => undefined))(target);
 };
 
@@ -42,6 +43,6 @@ export const composeElement = (...funcs) => elementType => (
 );
 
 export const withChildren = (...children) => element => {
-    children.forEach(child => element.appendChild(child));
+    children.forEach(child => mount(child, element));
     return element;
 };
