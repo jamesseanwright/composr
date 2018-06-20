@@ -33,7 +33,12 @@ export default [{
     input: 'example/index.js',
 
     output: {
-        name: 'f', // unfortunately required, but accomodated when capturing sizes
+        /* A name is unfortunately required here due
+         * to a bug with rollup-plugin-commonjs. See
+         * issues/188. Should be resolved soon! This
+         * declaration is removed by hand when
+         * capturing output sizes */
+        name: 'f',
         format: 'iife',
         file: 'example-dist/index.cjs.min.js',
     },
