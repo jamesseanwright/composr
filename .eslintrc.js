@@ -5,6 +5,7 @@ module.exports = {
         es6: true,
         node: true,
         browser: true,
+        'jest/globals': true,
     },
 
     parserOptions: {
@@ -13,6 +14,8 @@ module.exports = {
     },
 
     extends: 'eslint:recommended',
+
+    plugins: ['jest'],
 
     rules: {
         indent: ['error', 4],

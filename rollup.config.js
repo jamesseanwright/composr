@@ -49,6 +49,6 @@ export default [{
             module: false,
             main: true,
         }),
-        commonMinification,
+        // commonMinification,
     ],
 }];

@@ -9,7 +9,7 @@
     "build:commonjs": "babel src --out-dir dist/commonjs",
     "build:esm": "cp -r src dist/esm",
     "build:example": "mkdir -p example-dist && rm -rf example-dist/* && rollup -c",
-    "test": "eslint 'src/**/*.mjs'"
+    "test": "eslint 'src/**/*.mjs' && jest"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,12 @@
     "@babel/cli": "7.0.0-beta.51",
     "@babel/core": "7.0.0-beta.51",
     "@babel/plugin-transform-modules-commonjs": "7.0.0-beta.51",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.0.1",
     "eslint": "4.19.1",
+    "eslint-plugin-jest": "21.17.0",
+    "jest": "23.1.0",
+    "regenerator-runtime": "^0.11.1",
     "rollup": "0.60.7",
     "rollup-plugin-commonjs": "9.1.3",
     "rollup-plugin-node-resolve": "3.3.0",
