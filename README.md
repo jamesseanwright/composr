@@ -1,6 +1,6 @@
 # Composr
 
-Composr is a proof-of-concept library for declaratively manipulating the DOM via function composition. I wrote this on CodePen before adapting it for my [Manchester Frontend Meetup talk](Manchester Frontend Meetup) talk, _Bundling ES Modules for Frontend Web Apps_.
+Composr is a proof-of-concept library for declaratively manipulating the DOM via function composition. I wrote this on CodePen before adapting it for my [Manchester Frontend Meetup](https://www.meetup.com/Manchester-Frontend-Meetup/) talk, _Bundling ES Modules for Frontend Web Apps_.
 
 ```js
 import {
